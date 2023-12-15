@@ -145,3 +145,6 @@ x-pack/test/security_api_integration/plugins/audit_log/audit.log
 .ftr
 role_users.json
 
+
+
+.nx/cache

@@ -1,0 +1,46 @@
+{
+  "targetDefaults": {
+    "build": {
+      "cache": true
+    },
+    "build:apidocs": {
+      "cache": true
+    },
+    "cover:functional:merge": {
+      "cache": true
+    },
+    "cover:report": {
+      "cache": true
+    },
+    "dev-docs": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "lint:es": {
+      "cache": true
+    },
+    "lint:style": {
+      "cache": true
+    },
+    "test:ftr": {
+      "cache": true
+    },
+    "test:ftr:runner": {
+      "cache": true
+    },
+    "test:jest": {
+      "cache": true
+    },
+    "test:jest_integration": {
+      "cache": true
+    },
+    "test:type_check": {
+      "cache": true
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  }
+}
