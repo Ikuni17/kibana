@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import type { Decorator } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import type { CoreStart } from '@kbn/core/public';
 import type { AgentConfiguration } from '../../../../../../common/agent_configuration/configuration_types';
 import { FETCH_STATUS } from '../../../../../hooks/use_fetcher';
@@ -19,7 +19,7 @@ export default {
   title: 'app/settings/AgentConfigurations/agent_configuration_create_edit',
 
   decorators: [
-    ((storyFn) => {
+    (storyFn) => {
       const coreMock = {} as unknown as CoreStart;
 
       // mock
@@ -38,9 +38,9 @@ export default {
           {storyFn()}
         </ApmPluginContext.Provider>
       );
-    }) as Decorator,
+    },
   ],
-};
+} as Meta;
 
 export const WithConfig = {
   render: () => {

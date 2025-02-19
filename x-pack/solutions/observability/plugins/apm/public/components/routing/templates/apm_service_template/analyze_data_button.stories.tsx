@@ -5,7 +5,7 @@
  * 2.0.
  */
 
-import type { StoryObj, Decorator } from '@storybook/react';
+import type { StoryObj, Meta } from '@storybook/react';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ENVIRONMENT_ALL } from '../../../../../common/environment_filter_values';
@@ -66,8 +66,8 @@ export default {
         </MemoryRouter>
       );
     },
-  ] as Decorator[],
-};
+  ],
+} as Meta;
 
 export const Example: StoryObj<Args> = {
   render: () => {

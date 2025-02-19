@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import type { Decorator } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 import { euiLightVars } from '@kbn/ui-theme';
 
@@ -22,8 +22,8 @@ export default {
         {storyFn()}
       </ThemeProvider>
     ),
-  ] as Decorator[],
-};
+  ],
+} as Meta;
 
 export const ShortTextNoLimit = {
   render: () => <TextFieldValue fieldName="Field name" value="Small value" />,

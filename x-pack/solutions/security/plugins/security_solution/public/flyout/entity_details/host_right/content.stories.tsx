@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import type { Decorator } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { EuiFlyout } from '@elastic/eui';
 import { TestProvider } from '@kbn/expandable-flyout/src/test/provider';
 import { StorybookProviders } from '../../../common/mock/storybook_providers';
@@ -29,8 +29,8 @@ export default {
         </TestProvider>
       </StorybookProviders>
     ),
-  ] as Decorator[],
-};
+  ],
+} as Meta;
 
 export const Default = {
   render: () => (

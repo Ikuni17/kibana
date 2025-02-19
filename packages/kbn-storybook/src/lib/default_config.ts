@@ -208,7 +208,7 @@ export const defaultConfig: StorybookConfig = {
 
     return WebpackConfig({ config });
   },
-  previewHead: (head: any) => `
+  previewHead: (head) => `
   ${head}
   <meta name="eui-global" />
   <meta name="emotion" />
