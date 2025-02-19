@@ -4002,11 +4002,30 @@
       "enabled": true
     },
     {
-      "groupName": "XState",
+      "groupName": "XState4",
       "matchDepNames": [
         "xstate",
+        "@xstate/react"
+      ],
+      "reviewers": [
+        "team:obs-ux-logs-team"
+      ],
+      "matchBaseBranches": [
+        "main"
+      ],
+      "labels": [
+        "Team:obs-ux-logs",
+        "release_note:skip",
+        "backport:all-open"
+      ],
+      "minimumReleaseAge": "7 days",
+      "separateMajorMinor": true,
+      "enabled": true
+    },
+    {
+      "groupName": "XState5",
+      "matchDepNames": [
         "xstate5",
-        "@xstate/react",
         "@xstate5/react"
       ],
       "reviewers": [
@@ -4016,11 +4035,12 @@
         "main"
       ],
       "labels": [
-        "Team:Obs UX Logs",
+        "Team:obs-ux-logs",
         "release_note:skip",
         "backport:all-open"
       ],
       "minimumReleaseAge": "7 days",
+      "separateMajorMinor": true,
       "enabled": true
     },
     {
@@ -4035,7 +4055,7 @@
         "main"
       ],
       "labels": [
-        "Team:Obs UX Logs",
+        "Team:obs-ux-logs",
         "release_note:skip",
         "backport:all-open"
       ],
