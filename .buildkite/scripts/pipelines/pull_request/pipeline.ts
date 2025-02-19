@@ -217,7 +217,7 @@ const getPipeline = (filename: string, removeSteps = true) => {
         /\.docnav\.json$/,
         /\.apidocs\.json$/,
         /\.devdocs\.json$/,
-        /\.mdx$/,
+        /^(?!.*__stories__\/).*\.mdx$/,
         /^dev_docs\/.*(png|gif|jpg|jpeg|webp)$/,
       ])) ||
       GITHUB_PR_LABELS.includes('ci:build-next-docs')
