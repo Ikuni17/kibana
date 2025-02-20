@@ -8,8 +8,8 @@
 import {
   UndeterminedProgress,
   CancelableDeterminedProgress,
-} from '../../../components/data_search_progress.stories';
-import { ErrorCalloutWithRetry } from '../../../components/data_search_error_callout.stories';
+} from '../../components/data_search_progress.stories';
+import { ErrorCalloutWithRetry } from '../../components/data_search_error_callout.stories';
 
 export default {
   title: 'infra/dataSearch/Overview',
