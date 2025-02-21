@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import type { ComponentStory } from '@storybook/react';
+import type { Meta, StoryFn } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Tab, type TabProps } from '../tab';
 import { STORYBOOK_TITLE } from './storybook_constants';
@@ -21,9 +21,9 @@ export default {
       values: [{ name: 'white', value: '#fff' }],
     },
   },
-};
+} as Meta;
 
-const TabTemplate: ComponentStory<React.FC<TabProps>> = (args) => (
+const TabTemplate: StoryFn<TabProps> = (args) => (
   <Tab {...args} onSelect={action('onSelect')} onClose={action('onClose')} />
 );
 
