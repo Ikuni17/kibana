@@ -11,12 +11,11 @@ import React from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { TabbedContent, type TabbedContentProps } from '../tabbed_content';
-import { STORYBOOK_TITLE } from './storybook_constants';
 
 let TMP_COUNTER = 0;
 
 export default {
-  title: `${STORYBOOK_TITLE}/Tabs`,
+  title: 'Unified Tabs/Tab',
   parameters: {
     backgrounds: {
       default: 'white',
