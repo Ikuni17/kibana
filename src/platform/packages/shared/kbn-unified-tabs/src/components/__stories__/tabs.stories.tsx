@@ -15,7 +15,7 @@ import { TabbedContent, type TabbedContentProps } from '../tabbed_content';
 let TMP_COUNTER = 0;
 
 export default {
-  title: 'Unified Tabs/Tab',
+  title: 'Unified Tabs/Tabs',
   parameters: {
     backgrounds: {
       default: 'white',
