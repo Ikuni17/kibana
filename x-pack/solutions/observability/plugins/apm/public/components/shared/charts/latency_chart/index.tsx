@@ -28,10 +28,12 @@ import { useApmServiceContext } from '../../../../context/apm_service/use_apm_se
 import { getLatencyChartScreenContext } from './get_latency_chart_screen_context';
 import { LatencyAggregationTypeSelect } from './latency_aggregation_type_select';
 
-export interface Props {
+interface Props {
   height?: number;
   kuery: string;
 }
+
+export type { Props };
 
 export function filterNil<T>(value: T | null | undefined): value is T {
   return value != null;

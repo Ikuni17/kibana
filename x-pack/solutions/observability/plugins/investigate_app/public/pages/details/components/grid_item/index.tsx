@@ -12,7 +12,7 @@ import { useTheme } from '../../../../hooks/use_theme';
 
 export const GRID_ITEM_HEADER_HEIGHT = 40;
 
-export interface GridItemProps {
+interface GridItemProps {
   id: string;
   title: string;
   children: React.ReactNode;
@@ -20,6 +20,8 @@ export interface GridItemProps {
   onDelete: () => void;
   loading: boolean;
 }
+
+export type { GridItemProps };
 
 const titleContainerClassName = css`
   overflow: hidden;

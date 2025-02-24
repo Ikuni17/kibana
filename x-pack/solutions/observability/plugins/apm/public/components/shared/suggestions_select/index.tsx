@@ -11,7 +11,7 @@ import { throttle } from 'lodash';
 import React, { useCallback, useState } from 'react';
 import { FETCH_STATUS, useFetcher } from '../../../hooks/use_fetcher';
 
-export interface SuggestionsSelectProps {
+interface SuggestionsSelectProps {
   customOptions?: Array<EuiComboBoxOptionOption<string>>;
   customOptionText?: string;
   defaultValue?: string;
@@ -26,6 +26,8 @@ export interface SuggestionsSelectProps {
   prepend?: string;
   serviceName?: string;
 }
+
+export type { SuggestionsSelectProps };
 
 export function SuggestionsSelect({
   customOptions,

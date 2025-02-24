@@ -58,7 +58,7 @@ function getContentsComponent(
   return null;
 }
 
-export interface ContentsProps {
+interface ContentsProps {
   elementData: cytoscape.NodeDataDefinition | cytoscape.ElementDataDefinition;
   environment: Environment;
   kuery: string;
@@ -67,13 +67,15 @@ export interface ContentsProps {
   onFocusClick: (event: MouseEvent<HTMLAnchorElement>) => void;
 }
 
-export interface PopoverProps {
+interface PopoverProps {
   focusedServiceName?: string;
   environment: Environment;
   kuery: string;
   start: string;
   end: string;
 }
+
+export type { ContentsProps, PopoverProps };
 
 export function Popover({ focusedServiceName, environment, kuery, start, end }: PopoverProps) {
   const { euiTheme } = useEuiTheme();
