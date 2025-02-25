@@ -1601,6 +1601,7 @@ packages/kbn-monaco/src/esql @elastic/kibana-esql
 /.ci/.storybook @elastic/kibana-operations
 
 # QA - Appex QA
+/x-pack/test/.gitignore @elastic/appex-qa
 /src/platform/packages/shared/kbn-es/src/serverless_resources/project_roles/es/roles.yml @elastic/appex-qa
 /src/platform/packages/shared/kbn-es/src/serverless_resources/project_roles/oblt/roles.yml @elastic/appex-qa
 /src/platform/packages/shared/kbn-es/src/serverless_resources/project_roles/security/roles.yml @elastic/appex-qa
