@@ -26,6 +26,7 @@ import {
   prHasFIPSLabel,
 } from '#pipeline-utils';
 
+// TODO: fake commit, remove after
 const prConfig = prConfigs.jobs.find((job) => job.pipelineSlug === 'kibana-pull-request');
 const emptyStep = `steps: []`;
 
