@@ -20,23 +20,6 @@ on:
   bots:
     - github-actions[bot]
     - kibanamachine
-resources:
-  - prefetch-pr-context.yml
-imports:
-  - .github/agents/code-reviewer.md
-engine:
-  id: claude
-  version: "2.1.206"
-  model: opus
-  max-turns: 120
-  env:
-    ANTHROPIC_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-    ANTHROPIC_BASE_URL: https://openrouter.ai/api
-    ANTHROPIC_DEFAULT_OPUS_MODEL: anthropic/claude-opus-4.8[1m]
-    ANTHROPIC_DEFAULT_HAIKU_MODEL: anthropic/claude-haiku-4.5
-    ANTHROPIC_DEFAULT_SONNET_MODEL: anthropic/claude-sonnet-4.6
-    CLAUDE_CODE_EFFORT_LEVEL: high
-    CLAUDE_CODE_SUBAGENT_MODEL: opus[1m]
 # Activation rules:
 # - Manual runs always activate.
 # - Non-draft PR events (opened/synchronize/reopened) activate unless reviewer:skip-ai is present.
@@ -91,6 +74,23 @@ env:
   PR_CONTEXT_ARTIFACT_NAME: &pr_context_artifact_name prefetched-pr-context-${{ github.event.pull_request.number || github.event.inputs.pr_number }}
   REVIEWER_COMMENT_ID: ${{ github.event.inputs.comment_id }}
   REVIEWER_COMMENT_TYPE: ${{ github.event.inputs.comment_type }}
+resources:
+  - prefetch-pr-context.yml
+imports:
+  - .github/agents/code-reviewer.md
+engine:
+  id: claude
+  version: "2.1.206"
+  model: opus
+  max-turns: 120
+  env:
+    ANTHROPIC_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+    ANTHROPIC_BASE_URL: https://openrouter.ai/api
+    ANTHROPIC_DEFAULT_OPUS_MODEL: anthropic/claude-opus-4.8[1m]
+    ANTHROPIC_DEFAULT_HAIKU_MODEL: anthropic/claude-haiku-4.5
+    ANTHROPIC_DEFAULT_SONNET_MODEL: anthropic/claude-sonnet-4.6
+    CLAUDE_CODE_EFFORT_LEVEL: high
+    CLAUDE_CODE_SUBAGENT_MODEL: opus[1m]
 tools:
   github:
     toolsets: [default]
